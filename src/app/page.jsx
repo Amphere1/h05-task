@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h1>HEllo world</h1>
+    <div className="w-[1440px] h-[4370px] bg-[#FFFFFF]">
+      
     </div>
   );
 }
