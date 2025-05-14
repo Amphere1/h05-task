@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="navbar flex gap-[40px] w-[1240px] justify-center items-center mx-auto">
+    <div className="navbar flex gap-[40px] w-[1240px] justify-center items-center mx-auto mt-[10px]">
       <p className="text-[#000000] leading-tight font-[Integral CF] text-[32px] not-italic leading-normal">
         SHOP.CO
       </p>
