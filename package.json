@@ -2,13 +2,16 @@
   "name": "h05-task",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node src/script/seed.js"
   },
   "dependencies": {
+    "mongoose": "^8.14.3",
     "next": "15.3.2",
     "next-cloudinary": "^6.16.0",
     "react": "^19.0.0",

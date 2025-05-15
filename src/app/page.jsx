@@ -151,6 +151,15 @@ export default function Home() {
         </svg>
 
       </div>
+
+      {/*New Arrivals*/}
+      <div className="mt-[72px] ml-[518px] mr-[519px]">
+        <p className="text-black text-center text-5xl not-italic font-bold leading-normal">NEW ARRIVALS</p>
+      </div>
+
+      <div>
+        
+      </div>
     </div>
   );
 }
