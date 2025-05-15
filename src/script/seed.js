@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Product from "../models/products.js";
+import NewArrivals from "../models/products.js";
 const MONGODB_URI = "mongodb://localhost:27017/ecommerce";
 
 const seedProducts = [
@@ -35,8 +35,8 @@ const seedProducts = [
 
 const seedDB = async () => {
   await mongoose.connect(MONGODB_URI);
-  await Product.deleteMany({});
-  await Product.insertMany(seedProducts);
+  await NewArrivals.deleteMany({});
+  await NewArrivals.insertMany(seedProducts);
   console.log("Database seeded!");
   mongoose.connection.close();
 };
