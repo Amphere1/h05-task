@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = "mongodb://localhost:27017/ecommerce";
+const MONGODB_URI = "mongodb+srv://krishnakantsahu916:depju7Wv2ZcNXLpt@cluster0.1jk8tke.mongodb.net/";
 
 if (!MONGODB_URI) {
   throw new Error("Please define the MONGODB_URI");

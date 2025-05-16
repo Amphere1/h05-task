@@ -1,50 +1,86 @@
-'use client';
+"use client";
+
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsDropdownOpen(false);
   };
 
   return (
-    <div className="navbar flex gap-[40px] w-[1240px] justify-center items-center mx-auto mt-[10px]">
+    <div className="navbar flex gap-[40px] w-[1240px] justify-center items-center mx-auto mt-[10px] ">
       <p className="text-[#000000] leading-tight font-[Integral CF] text-[32px] not-italic leading-normal">
         SHOP.CO
       </p>
       <div className="flex items-center gap-[24px]">
-        <div className="flex items-center gap-[4px]">
-          <p className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal">
-            Shop
-          </p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
+        <div className="relative">
+          <div
+            className="flex items-center gap-[4px] cursor-pointer hover:opacity-80"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           >
-            <path
-              d="M13.5306 6.53063L8.53063 11.5306C8.46095 11.6005 8.37816 11.656 8.28699 11.6939C8.19583 11.7317 8.09809 11.7512 7.99938 11.7512C7.90067 11.7512 7.80293 11.7317 7.71176 11.6939C7.6206 11.656 7.53781 11.6005 7.46813 11.5306L2.46813 6.53063C2.32723 6.38973 2.24808 6.19864 2.24808 5.99938C2.24808 5.80012 2.32723 5.60902 2.46813 5.46813C2.60902 5.32723 2.80012 5.24808 2.99938 5.24808C3.19864 5.24808 3.38973 5.32723 3.53063 5.46813L8 9.9375L12.4694 5.4675C12.6103 5.32661 12.8014 5.24745 13.0006 5.24745C13.1999 5.24745 13.391 5.32661 13.5319 5.4675C13.6728 5.6084 13.7519 5.7995 13.7519 5.99875C13.7519 6.19801 13.6728 6.38911 13.5319 6.53L13.5306 6.53063Z"
-              fill="black"
-            />
-          </svg>
+            <p className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal">
+              Shop
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              className={`transform transition-transform duration-200 ${
+                isDropdownOpen ? "rotate-180" : ""
+              }`}
+            >
+              <path
+                d="M13.5306 6.53063L8.53063 11.5306C8.46095 11.6005 8.37816 11.656 8.28699 11.6939C8.19583 11.7317 8.09809 11.7512 7.99938 11.7512C7.90067 11.7512 7.80293 11.7317 7.71176 11.6939C7.6206 11.656 7.53781 11.6005 7.46813 11.5306L2.46813 6.53063C2.32723 6.38973 2.24808 6.19864 2.24808 5.99938C2.24808 5.80012 2.32723 5.60902 2.46813 5.46813C2.60902 5.32723 2.80012 5.24808 2.99938 5.24808C3.19864 5.24808 3.38973 5.32723 3.53063 5.46813L8 9.9375L12.4694 5.4675C12.6103 5.32661 12.8014 5.24745 13.0006 5.24745C13.1999 5.24745 13.391 5.32661 13.5319 5.4675C13.6728 5.6084 13.7519 5.7995 13.7519 5.99875C13.7519 6.19801 13.6728 6.38911 13.5319 6.53L13.5306 6.53063Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+
+          {isDropdownOpen && (
+            <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+              <div
+                onClick={() => scrollToSection("topSelling")}
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-[#000000] font-[Satoshi] text-[16px]"
+              >
+                On Sale
+              </div>
+              <div
+                onClick={() => scrollToSection("newArrivals")}
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-[#000000] font-[Satoshi] text-[16px]"
+              >
+                New Arrivals
+              </div>
+              <div
+                onClick={() => scrollToSection("brands")}
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-[#000000] font-[Satoshi] text-[16px]"
+              >
+                Brands
+              </div>
+            </div>
+          )}
         </div>
-        <p 
-          onClick={() => scrollToSection('topSelling')}
+        <p
+          onClick={() => scrollToSection("topSelling")}
           className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal cursor-pointer hover:text-gray-600"
         >
           On Sale
         </p>
-        <p 
-          onClick={() => scrollToSection('newArrivals')}
+        <p
+          onClick={() => scrollToSection("newArrivals")}
           className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal cursor-pointer hover:text-gray-600"
         >
           New Arrivals
         </p>
-        <p 
-          onClick={() => scrollToSection('brands')}
+        <p
+          onClick={() => scrollToSection("brands")}
           className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal cursor-pointer hover:text-gray-600"
         >
           Brands

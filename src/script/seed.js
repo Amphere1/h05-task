@@ -1,35 +1,35 @@
 import mongoose from "mongoose";
 import NewArrivals from "../models/products.js";
-const MONGODB_URI = "mongodb://localhost:27017/ecommerce";
+const MONGODB_URI = "mongodb+srv://krishnakantsahu916:depju7Wv2ZcNXLpt@cluster0.1jk8tke.mongodb.net/";
 
 const seedProducts = [
   {
-    name: "T-shirt with Tape Details",
-    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747402375/image_7_q4olzi.png",
-    price: 120,
+    name: "VERTICAL STRIPED SHIRT",
+    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747320693/image_7_fp2txl.png",
+    price: 212,
     rating: 4.7,
-    isNewArrival: false
+    isNewArrival: true
   },
   {
-    name: "Skinny Fit Jeans",
-    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747402455/image_8_pxlauc.png",
-    price: 240,
+    name: "COURAGE GRAPHIC T-SHIRT",
+    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747320819/image_8_bwhenn.png",
+    price: 145,
     rating: 4.4,
-    isNewArrival: false
+    isNewArrival: true
   },
   {
-    name: "Checkered Shirt",
-    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747402551/image_9_vyepzy.png",
-    price: 180,
+    name: "LOOSE FIT BERMUDA SHORTS",
+    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747320919/image_9_hanjby.png",
+    price: 80,
     rating: 4.4,
-    isNewArrival: false
+    isNewArrival: true
   },
   {
-    name: "Sleeve Striped T-shirt",
-    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747402600/image_10_gllk8z.png",
-    price: 130,
+    name: "FADED SKINNY JEANS",
+    imageUrl: "https://res.cloudinary.com/dsjxx976j/image/upload/v1747321005/image_10_ax0foq.png",
+    price: 210,
     rating: 4.4,
-    isNewArrival: false
+    isNewArrival: true
   }
 ];
 
