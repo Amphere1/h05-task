@@ -1,6 +1,6 @@
 export default function Brands(){
     return(
-        <div className="w-full h-[122px] bg-black shrink-0 flex justify-center items-center gap-[106px]">
+        <div id="brands" className="w-full h-[122px] bg-black shrink-0 flex justify-center items-center gap-[106px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="167"

@@ -44,7 +44,7 @@ export default function NewArrivals() {
   }, []);
 
   return (
-    <div>
+    <div id="newArrivals">
       <div className="mt-[72px] mx-auto max-w-3xl">
         <p className="text-black text-center text-5xl font-bold">
           NEW ARRIVALS

@@ -1,4 +1,13 @@
+'use client';
+
 export default function Navbar() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="navbar flex gap-[40px] w-[1240px] justify-center items-center mx-auto mt-[10px]">
       <p className="text-[#000000] leading-tight font-[Integral CF] text-[32px] not-italic leading-normal">
@@ -22,13 +31,22 @@ export default function Navbar() {
             />
           </svg>
         </div>
-        <p className="text-[#000000] font-[Satosh] text-[16px] not-italic font-[400] leading-normal">
+        <p 
+          onClick={() => scrollToSection('topSelling')}
+          className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal cursor-pointer hover:text-gray-600"
+        >
           On Sale
         </p>
-        <p className="text-[#000000] font-[Satosh] text-[16px] not-italic font-[400] leading-normal">
+        <p 
+          onClick={() => scrollToSection('newArrivals')}
+          className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal cursor-pointer hover:text-gray-600"
+        >
           New Arrivals
         </p>
-        <p className="text-[#000000] font-[Satosh] text-[16px] not-italic font-[400] leading-normal">
+        <p 
+          onClick={() => scrollToSection('brands')}
+          className="text-[#000000] font-[Satoshi] text-[16px] not-italic font-[400] leading-normal cursor-pointer hover:text-gray-600"
+        >
           Brands
         </p>
       </div>
