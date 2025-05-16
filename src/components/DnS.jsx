@@ -8,19 +8,19 @@ export default function DnS() {
   if (!isVisible) return null;
 
   return (
-    <div className="flex items-center justify-between bg-black px-4 py-2 lg:px-[100px] lg:py-[9px] lg:h-[38px]">
-      <div className="flex justify-center items-center gap-2 lg:gap-1 w-full">
-        <p className="text-white text-sm lg:text-[14px] font-[400] font-[Satoshi] leading-normal">
+    <div className="flex items-center justify-between bg-black px-4 py-2 lg:px-[100px] lg:py-[9px]">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 lg:gap-1 w-full text-center sm:text-left">
+        <p className="text-white text-xs sm:text-sm lg:text-[14px] font-[400] font-[Satoshi] leading-normal">
           Sign up and get 20% off to your first order.
         </p>
-        <p className="text-white text-sm lg:text-[14px] font-[500] font-[Satoshi] leading-normal underline">
+        <p className="text-white text-xs sm:text-sm lg:text-[14px] font-[500] font-[Satoshi] leading-normal underline cursor-pointer">
           Sign Up Now
         </p>
       </div>
 
       <button 
-        className="ml-4 lg:ml-[100px]"
         onClick={() => setIsVisible(false)}
+        className="hidden sm:block"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
