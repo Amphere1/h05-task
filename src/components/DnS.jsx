@@ -1,5 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 
 export default function DnS() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null;
+
   return (
     <div className="flex items-center justify-between bg-black px-4 py-2 lg:px-[100px] lg:py-[9px] lg:h-[38px]">
       <div className="flex justify-center items-center gap-2 lg:gap-1 w-full">
@@ -11,7 +18,10 @@ export default function DnS() {
         </p>
       </div>
 
-      <button className="ml-4 lg:ml-[100px]">
+      <button 
+        className="ml-4 lg:ml-[100px]"
+        onClick={() => setIsVisible(false)}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-5 h-5"
